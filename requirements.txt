@@ -1,0 +1,4 @@
+openai
+pypinyin
+pypinyin_dict
+httpx[http2]
