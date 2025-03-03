@@ -10,16 +10,6 @@ from data_runer.pipeline import Pipeline
 from data_runer.utils import get_to_file_writer_error_handler, ThreadSafeFileWriter
 from data_runer.llm import LLMCall
 
-from pypinyin import lazy_pinyin, Style
-from pypinyin_dict.pinyin_data import ktghz2013
-from pypinyin_dict.phrase_pinyin_data import large_pinyin
-
-# load better pinyin data
-ktghz2013.load()
-# load better phrase pinyin data
-large_pinyin.load()
-
-# The error description of GEC part is from FCGEC dataset
 task_prompt = """
 # The following contents are the search results related to the user's message:
 {search_results}
